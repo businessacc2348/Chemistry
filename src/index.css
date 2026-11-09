@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #0b0f19;
+    color: #f1f5f9;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+/* Custom animations for reactions */
+@keyframes flame-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.8)) drop-shadow(0 0 35px rgba(239, 68, 68, 0.6));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 25px rgba(251, 191, 36, 1)) drop-shadow(0 0 50px rgba(249, 115, 22, 0.8));
+    transform: scale(1.04) translateY(-2px);
+  }
+}
+
+@keyframes steam-rise {
+  0% {
+    opacity: 0.8;
+    transform: translateY(0) scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.4);
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.6);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-25px) scale(1.2);
+  }
+}
+
+.animate-flame {
+  animation: flame-glow 1.2s ease-in-out infinite;
+}
+
+.animate-steam {
+  animation: steam-rise 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-bubble {
+  animation: bubble-rise 1.8s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

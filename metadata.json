@@ -1,0 +1,6 @@
+{
+  "name": "Period 3 ChemQuest: AS & A-Level Periodicity",
+  "description": "Interactive Cambridge AS/A-Level Chemistry game and lab simulator covering Period 3 physical and chemical periodicity, reactions, pH, bonding, and element deduction.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
